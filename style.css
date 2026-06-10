@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #312e81,
+        #581c87
+    );
+
+    color:white;
+}
+
+.container{
+    text-align:center;
+}
+
+.gift-box{
+    width:220px;
+    cursor:pointer;
+
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.open-btn{
+    margin-top:25px;
+
+    padding:15px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:gold;
+    color:black;
+
+    font-size:1.1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 0 20px gold;
+}
+
+.open-btn:hover{
+    transform:scale(1.05);
+}
+
+.hidden{
+    display:none;
+}
+
+.card{
+    width:min(90%,800px);
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.title{
+    font-size:3rem;
+
+    color:gold;
+
+    text-shadow:
+    0 0 15px gold,
+    0 0 30px gold;
+}
+
+.photo{
+    width:260px;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:5px solid gold;
+
+    margin:25px 0;
+
+    box-shadow:
+    0 0 25px gold;
+}
+
+.message{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.message p{
+    margin-bottom:15px;
+}
+
+.footer{
+    margin-top:25px;
+    color:gold;
+}
+
+.confetti{
+    position:fixed;
+
+    width:10px;
+    height:10px;
+
+    top:-10px;
+
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+    }
+}
